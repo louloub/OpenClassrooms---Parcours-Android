@@ -12,8 +12,10 @@ public class UserRepository {
     private final ApiService apiService;
 
     // Voir "Injection" pour la création d'un nouveau UserReporitory
-    // Dans notre cas le service définir pour l'instanciation de
-    // "UserRepository" est "FakeApiService"
+    // Dans notre cas le service défini pour l'instanciation de
+    // "UserRepository" est "FakeApiService" (dans "injection")
+    // En modifiant le service on modifie le comportement des méthodes
+    // défini dans le nouveau service
     public UserRepository(ApiService apiService) {
         this.apiService = apiService;
     }
