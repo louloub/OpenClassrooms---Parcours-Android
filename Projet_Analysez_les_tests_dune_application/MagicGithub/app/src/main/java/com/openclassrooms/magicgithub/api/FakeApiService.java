@@ -18,6 +18,10 @@ import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generat
 
 public class FakeApiService implements ApiService {
 
+    // TODO : supprimer tout les com + commit & push
+    // Test unitaire : on test les methodes dans une JVM (java test java)
+    // Test instrumentalisé : on test sur une device en réél
+
     private List<User> users = generateUsers();
 
     /**
@@ -26,7 +30,6 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public List<User> getUsers() {
-        // TODO: A modifier
         // "generateUsers" in "FakeApiService.java" line21 return arraylist of fake
         // users (in FakeApiServiceGenerator.java line12)
         return users;
@@ -38,7 +41,6 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public void generateRandomUser() {
-        // TODO: A modifier
         // Generate "userRandom" with method "random" in objet "user" line28
         User userRandom = User.random();
         // Add this "userRandom" in "users" (List<User>)
@@ -50,7 +52,6 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public void deleteUser(User user) {
-        // TODO: A modifier
         // method remove can accpet "int" or another object (polymorphism)
         // Use method "remove" of object "User" for remove a user in "Users" with his index
         users.remove(user);
